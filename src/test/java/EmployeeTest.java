@@ -25,14 +25,14 @@ public class EmployeeTest {
     @Test
     public void employeeChangeName() {
         employee = new Manager("Bill", 23456, 50000, "Management");
-        Employee newEmployeeName = new Manager("Sarah", 23456, 50000, "Management");
-        assertEquals("Sarah", employee.setName(newEmployeeName.getName()));
+        employee.setName("Sarah");
+        assertEquals("Sarah", employee.getName());
     }
 
     @Test
     public void employeeChangeNameNull() {
         employee = new Manager("Bill", 23456, 50000, "Management");
-        Employee newEmployeeName = new Manager(null, 23456, 50000, "Management");
-        assertEquals("Bill", employee.setName(newEmployeeName.getName()));
+        employee.setName(null);
+        assertEquals("Bill", employee.getName());
     }
 }

@@ -1,13 +1,13 @@
 package staff;
 
 public abstract class Employee {
-    private String name;
-    private int NiNumber;
-    private double salary;
+    String name;
+    int niNumber;
+    double salary;
 
-    public Employee(String name, int NiNumber, double salary) {
+    public Employee(String name, int niNumber, double salary) {
         this.name = name;
-        this.NiNumber = NiNumber;
+        this.niNumber = niNumber;
         this.salary = salary;
     }
 
@@ -15,15 +15,14 @@ public abstract class Employee {
         return this.name;
     }
 
-    public String setName(String name) {
+    public void setName(String name) {
         if(name != null) {
             this.name = name;
         }
-        return this.name;
     }
 
     public int getNiNumber() {
-        return this.NiNumber;
+        return this.niNumber;
     }
 
     public double getSalary() {
@@ -32,13 +31,13 @@ public abstract class Employee {
 
 
     public double raiseSalary(double increaseSalary) {
-        if (increaseSalary > 0) {
+        if (increaseSalary >= 0) {
             this.salary += increaseSalary;
         }
         return this.salary;
     }
 
     public double payBonus() {
-        return this.salary / 100;
+        return this.salary * 0.01;
     }
 }

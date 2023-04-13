@@ -49,7 +49,8 @@ public class ManagerTest {
 
     @Test
     public void changeName() {
-        assertEquals("Sarah", manager.setName("Sarah"));
+        manager.setName("Sarah");
+        assertEquals("Sarah", manager.getName());
     }
 
 
